@@ -1,0 +1,36 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  background-color: #f9fafb;
+}
+
+/* Override default body styles from index.css */
+body {
+  display: block;
+  min-height: auto;
+  place-items: normal;
+}
+
+/* Product page specific styles */
+.product-images img {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.product-info h1 {
+  margin-top: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
