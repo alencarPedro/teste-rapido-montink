@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
+# Teste Rápido Montink - Loja de Camisetas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Sobre o Projeto
 
-Currently, two official plugins are available:
+Este é um projeto de e-commerce para venda de camisetas, desenvolvido com React, TypeScript e Tailwind CSS. A aplicação permite que os usuários visualizem produtos, escolham diferentes cores e tamanhos, adicionem itens ao carrinho e verifiquem disponibilidade de entrega.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- **Visualização de produtos** com múltiplas imagens
+- **Seleção de variantes** (cores e tamanhos)
+- **Carrinho de compras** com persistência local
+- **Verificação de disponibilidade** de entrega por CEP
+- **Armazenamento local** das seleções do usuário e itens do carrinho
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React 19** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset tipado de JavaScript
+- **Tailwind CSS 4** - Framework CSS utilitário
+- **Vite** - Ferramenta de build rápida para desenvolvimento web
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+
+- Node.js (versão recomendada: 18+)
+- npm ou yarn
+
+### Instalação
+
+1. Clone o repositório
+
+   ```bash
+   git clone [url-do-repositorio]
+   ```
+
+2. Acesse a pasta do projeto
+
+   ```bash
+   cd teste-rapido-montink
+   ```
+
+3. Instale as dependências
+
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
+
+4. Execute o projeto em modo de desenvolvimento
+
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. Acesse `http://localhost:5173` no seu navegador
+
+## 📦 Estrutura do Projeto
+
+```
+teste-rapido-montink/
+├── public/             # Arquivos públicos
+├── src/                # Código fonte
+│   ├── assets/         # Recursos estáticos
+│   ├── components/     # Componentes React
+│   │   ├── CartModal.tsx       # Modal do carrinho
+│   │   ├── DeliveryCheck.tsx   # Verificação de entrega
+│   │   ├── ProductImages.tsx   # Galeria de imagens
+│   │   └── ProductPage.tsx     # Página principal do produto
+│   ├── App.tsx         # Componente principal
+│   └── main.tsx        # Ponto de entrada
+├── package.json        # Dependências e scripts
+└── README.md           # Documentação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔄 Recursos Implementados
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Persistência de dados**: As seleções do usuário (cor e tamanho) são salvas no localStorage por 15 minutos
+- **Carrinho persistente**: Os itens do carrinho são salvos no localStorage por 30 minutos
+- **Interface responsiva**: Design adaptável para diferentes tamanhos de tela
+- **Experiência de usuário aprimorada**: Feedback visual para seleções e ações
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 👥 Autor
+
+Pedro Alencar - pedroalencar.ssr@gmail.com
+
+---
+
+Desenvolvido como parte de um teste para a Montink.
